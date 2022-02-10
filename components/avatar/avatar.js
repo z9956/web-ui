@@ -5,8 +5,7 @@ const defaultConfig = {
 	buttonPrimary: 'default',
 };
 
-// const Selector = `${PREFIX}-avatar`;
-const Selector = `w-avatar`;
+const selector = `${PREFIX}-avatar`;
 
 class Avatar extends HTMLElement {
 	shadowRoot = null;
@@ -21,10 +20,10 @@ class Avatar extends HTMLElement {
 
 	render() {
 		this.shadowRoot = this.attachShadow({ mode: 'closed' });
-		this.shadowRoot.innerHTML = renderTemplate(this.config);
+		this.shadowRoot.innerHTML = renderTemplate(this.config, selector);
 	}
 }
 
-if (!customElements.get(Selector)) {
-	customElements.define(Selector, Avatar);
+if (!customElements.get(selector)) {
+	customElements.define(selector, Avatar);
 }
