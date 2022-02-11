@@ -1,5 +1,5 @@
 import renderTemplate from './template.js';
-import { PREFIX } from '../../config/constant.js';
+import { PREFIX } from '../config/constant.js';
 
 export const selector = `${PREFIX}-button`;
 
