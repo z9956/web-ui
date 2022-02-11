@@ -6,7 +6,7 @@
 
 <w-button>default</w-button>
 <w-button variant="secondary">secondary</w-button>
-<w-button variant="dashed">dashed</w-button>
+<w-button variant="primary">primary</w-button>
 <w-button variant="error">error</w-button>
 
 ```html
