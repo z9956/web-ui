@@ -1,6 +1,6 @@
 import renderTemplate from './template.js';
 import { PREFIX } from '../config/constant.js';
-import { getAttributes } from '../utils/index.js';
+import { getAttributes } from '../utils';
 
 export const selector = `${PREFIX}-button`;
 
