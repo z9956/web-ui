@@ -12,3 +12,12 @@ export const getAttributes = (elem) => {
 
 	return attrs;
 };
+
+export const isElement = (el) => {
+	return (
+		el != null &&
+		typeof el == 'object' &&
+		'nodeType' in el &&
+		el.nodeType === Node.ELEMENT_NODE
+	);
+};
