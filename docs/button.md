@@ -21,13 +21,13 @@
 `sm`、`md`、`lg`
 
 <w-button>default</w-button>
-<w-button variant="secondary" size="sm">secondary sm</w-button>
+<w-button variant="secondary">secondary sm</w-button>
 <w-button variant="primary" size="md">primary md</w-button>
 <w-button variant="error" size="lg">error lg</w-button>
 
 ```html
 <w-button>default</w-button>
-<w-button variant="secondary" size="sm">secondary sm</w-button>
+<w-button variant="secondary">secondary sm</w-button>
 <w-button variant="primary" size="md">primary md</w-button>
 <w-button variant="error" size="lg">error lg</w-button>
 ```

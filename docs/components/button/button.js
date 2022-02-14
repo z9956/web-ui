@@ -1,5 +1,6 @@
 import renderTemplate from './template.js';
 import { PREFIX } from '../config/constant.js';
+import { getAttributes } from '../utils/index.js';
 
 export const selector = `${PREFIX}-button`;
 
@@ -14,7 +15,7 @@ class Button extends HTMLElement {
 
 	// https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks
 	static get observedAttributes() {
-		return ['disabled', 'onclick', 'href'];
+		return ['disabled', 'onclick', 'href', 'size', 'variant'];
 	}
 
 	constructor() {
@@ -24,6 +25,10 @@ class Button extends HTMLElement {
 
 	render() {
 		this.shadowRoot = this.attachShadow({ mode: 'closed' });
+	}
+
+	updateStyle() {
+		this.config = { ...defaultConfig, ...getAttributes(this) };
 		this.shadowRoot.innerHTML = renderTemplate(this.config, selector);
 	}
 
@@ -58,6 +63,8 @@ class Button extends HTMLElement {
 	}
 
 	connectedCallback() {
+		this.updateStyle();
+
 		this.selector = this.shadowRoot.querySelector(`.${selector}`);
 
 		this.disabled = this.disabled;
