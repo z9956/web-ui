@@ -22,6 +22,19 @@ const getButtonSize = {
 	`,
 };
 
+const getButtonHover = {
+	secondary: `
+	  border-color: ${defaultStyles.primary};
+	  color: ${defaultStyles.primary};
+	`,
+	primary: `
+	  opacity: 0.8;
+	`,
+	error: `
+	  opacity: 0.8;
+	`,
+};
+
 const getButtonVariant = {
 	secondary: `
 	  border-color: ${defaultStyles.border};
@@ -45,8 +58,9 @@ const getButtonStyles = (config) => {
 
 	const variantStyle = getButtonVariant[variant];
 	const sizeStyle = getButtonSize[size];
+	const hoverStyle = getButtonHover[variant];
 
-	return [variantStyle, sizeStyle];
+	return [variantStyle, sizeStyle, hoverStyle];
 };
 
 export default getButtonStyles;

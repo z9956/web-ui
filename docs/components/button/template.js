@@ -2,7 +2,7 @@ import defaultStyles from '../config/defaultStyle.js';
 import getButtonStyles from './style.js';
 
 export default (config, selector) => {
-	const [buttonStyles, buttonSize] = getButtonStyles(config);
+	const [buttonStyles, buttonSize, hoverStyle] = getButtonStyles(config);
 
 	return `
         <style>
@@ -23,17 +23,8 @@ export default (config, selector) => {
             	transform: scale(0.95);
             }
 			
-			:host([variant="secondary"]) .${selector}:hover {
-            	border-color: ${defaultStyles.primary};
-				color: ${defaultStyles.primary};
-			}
-			
-			:host([variant="primary"]) .${selector}:hover {
-            	opacity: 0.8;
-			}
-            
-            :host([variant="error"]) .${selector}:hover {
-            	opacity: 0.8;
+			.${selector}:hover {
+            	 ${hoverStyle};
 			}
             
             :host([disabled]) .${selector} { 
