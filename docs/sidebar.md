@@ -2,3 +2,4 @@
 - **Component**
   - [button](button.md)
   - [avatar](avatar.md)
+  - [image](image.md)

@@ -43,10 +43,10 @@
 ></w-avatar>
 ```
 
-## `style`
-
-<w-avatar shape="square" style="'background-color': '#87D068'">user</w-avatar>
-
-```html
-<w-avatar shape="square" style="'background-color': '#87D068'">user</w-avatar>
-```
+[//]: # '## `style`'
+[//]: #
+[//]: # (<w-avatar shape="square" style="'background-color': '#87D068'">user</w-avatar>)
+[//]: #
+[//]: # '```html'
+[//]: # (<w-avatar shape="square" style="'background-color': '#87D068'">user</w-avatar>)
+[//]: # '```'
